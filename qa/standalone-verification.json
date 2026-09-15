@@ -1,0 +1,205 @@
+{
+  "started_at": "2026-09-15T19:42:01.597109+00:00",
+  "status": "passed_for_standalone_checks",
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "dependencies": {
+    "jsonschema": "4.26.0",
+    "referencing": "0.37.0"
+  },
+  "analysis_performed": false,
+  "ahif_version": "0.1.1",
+  "tests": {
+    "run": 61,
+    "passed": 60,
+    "failures": 0,
+    "errors": 0,
+    "skipped": [
+      {
+        "test": "test_review.ReviewTests.test_actual_ahas_schema_rejects_direct_ahif",
+        "reason": "Requires the original AHAS workspace and installation; not part of standalone format validation."
+      }
+    ]
+  },
+  "source_preservation": {
+    "files": 92,
+    "byte_identical": true
+  },
+  "verified_checksum_entries": {
+    "0.1.1": 55,
+    "0.1.0": 34
+  },
+  "bundles": {
+    "empty-bundle": {
+      "status": "passed",
+      "format_version": "0.1.1",
+      "record_observations": 0,
+      "distinct_record_keys": 0,
+      "account_observations": 0,
+      "record_keys_with_multiple_observations": 0,
+      "source_local_record_observations": 0,
+      "projection_status": "not_performed",
+      "authenticity_status": "not_established",
+      "canonical_export": true,
+      "completeness_status": "not_established",
+      "count_semantics": "supplied keys only; not verified posting-event totals",
+      "warnings": {},
+      "files": [
+        {
+          "path": "records.jsonl",
+          "role": "records",
+          "rows": 0
+        }
+      ]
+    },
+    "hostile-and-identity": {
+      "status": "passed",
+      "format_version": "0.1.1",
+      "record_observations": 3,
+      "distinct_record_keys": 3,
+      "account_observations": 2,
+      "record_keys_with_multiple_observations": 0,
+      "source_local_record_observations": 0,
+      "projection_status": "not_performed",
+      "authenticity_status": "not_established",
+      "canonical_export": true,
+      "completeness_status": "not_established",
+      "count_semantics": "supplied keys only; not verified posting-event totals",
+      "warnings": {},
+      "files": [
+        {
+          "path": "accounts.jsonl",
+          "role": "accounts",
+          "rows": 2
+        },
+        {
+          "path": "raw/source.json",
+          "role": "raw",
+          "rows": null
+        },
+        {
+          "path": "records.jsonl",
+          "role": "records",
+          "rows": 3
+        }
+      ]
+    },
+    "minimal": {
+      "status": "passed",
+      "format_version": "0.1.1",
+      "record_observations": 1,
+      "distinct_record_keys": 1,
+      "account_observations": 0,
+      "record_keys_with_multiple_observations": 0,
+      "source_local_record_observations": 0,
+      "projection_status": "not_performed",
+      "authenticity_status": "not_established",
+      "canonical_export": true,
+      "completeness_status": "not_established",
+      "count_semantics": "supplied keys only; not verified posting-event totals",
+      "warnings": {},
+      "files": [
+        {
+          "path": "records.jsonl",
+          "role": "records",
+          "rows": 1
+        }
+      ]
+    },
+    "mixed-platform": {
+      "status": "passed",
+      "format_version": "0.1.1",
+      "record_observations": 12,
+      "distinct_record_keys": 11,
+      "account_observations": 3,
+      "record_keys_with_multiple_observations": 1,
+      "source_local_record_observations": 0,
+      "projection_status": "not_performed",
+      "authenticity_status": "not_established",
+      "canonical_export": true,
+      "completeness_status": "not_established",
+      "count_semantics": "supplied keys only; not verified posting-event totals",
+      "warnings": {},
+      "files": [
+        {
+          "path": "accounts.jsonl",
+          "role": "accounts",
+          "rows": 3
+        },
+        {
+          "path": "raw/source.json",
+          "role": "raw",
+          "rows": null
+        },
+        {
+          "path": "records.jsonl",
+          "role": "records",
+          "rows": 12
+        }
+      ]
+    },
+    "review-cases": {
+      "status": "passed",
+      "format_version": "0.1.1",
+      "record_observations": 14,
+      "distinct_record_keys": 11,
+      "account_observations": 2,
+      "record_keys_with_multiple_observations": 1,
+      "source_local_record_observations": 1,
+      "projection_status": "not_performed",
+      "authenticity_status": "not_established",
+      "canonical_export": true,
+      "completeness_status": "not_established",
+      "count_semantics": "supplied keys only; not verified posting-event totals",
+      "warnings": {},
+      "files": [
+        {
+          "path": "accounts.jsonl",
+          "role": "accounts",
+          "rows": 2
+        },
+        {
+          "path": "records.jsonl",
+          "role": "records",
+          "rows": 14
+        }
+      ]
+    },
+    "uncertain-time": {
+      "status": "passed",
+      "format_version": "0.1.1",
+      "record_observations": 4,
+      "distinct_record_keys": 4,
+      "account_observations": 0,
+      "record_keys_with_multiple_observations": 0,
+      "source_local_record_observations": 0,
+      "projection_status": "not_performed",
+      "authenticity_status": "not_established",
+      "canonical_export": true,
+      "completeness_status": "not_established",
+      "count_semantics": "supplied keys only; not verified posting-event totals",
+      "warnings": {},
+      "files": [
+        {
+          "path": "raw/source.json",
+          "role": "raw",
+          "rows": null
+        },
+        {
+          "path": "records.jsonl",
+          "role": "records",
+          "rows": 4
+        }
+      ]
+    }
+  },
+  "regeneration": {
+    "files_compared": 27,
+    "byte_identical": true
+  },
+  "limitations": [
+    "Original AHAS integration test explicitly skipped; engine not included.",
+    "No source collection, projection, scientific analysis or production ingestion audit.",
+    "Historical adoption receipts are preserved, not regenerated."
+  ],
+  "finished_at": "2026-09-15T19:42:02.596322+00:00"
+}
