@@ -1,0 +1,20 @@
+{
+  "profile_id": "ahas-conservative",
+  "version": "1.0.0",
+  "ahif_version": "0.1.1",
+  "ahas_version": "1.0.4",
+  "input_schema_version": "1.0.0",
+  "selection_version": "1.0.0",
+  "scope": "Exactly one source and its source-local export subject; all supplied kinds and dates are considered, with explicit refusals. No cross-capture identity reconciliation.",
+  "as_of": "Selected observations only; no inferred website as-of instant. Capture time is null.",
+  "repeat": "Group full record_key. Exclude root provenance, observation_id, observed_at, part locators and the source extension row ordinal for evidence equivalence; every other field must agree. Select lexicographically smallest observation_id only within an equivalent group, recording all alternatives.",
+  "conflict": "Quarantine every eligible observation of a disagreeing logical key. No manual override or newest-wins in version 1.0.0.",
+  "time": "Non-temporal selection. Date-only/interval creation/update times are omitted with coarse_time_omitted. Exact >6 fractional digits or nanosecond precision refuse. Unknown maps to null.",
+  "text": "No retained-text projection in this profile: exported lifecycle/completeness/dialect/embedded attribution are not established. Metadata-only deleted/removed/unavailable records are supported. Empty bodies are not manufactured.",
+  "parents": "One known_identity reply_to maps through event alias even if target absent; unresolved target maps null with loss; conflicting parents refuse. Parent time stays null.",
+  "identity": "AHIF:projection-record-key:1 and AHIF:projection-account-key:1 hash domains as frozen compatibility map",
+  "snapshot_identity": "sha256 of AHIF:projection:1.0.0 newline + canonical {profile_sha256, selection, records, snapshot_without_id}; excludes paths, runtime receipts and bundle layout",
+  "coverage": "sampled for deliberate projection, unknown temporal endpoints; no completeness percentage",
+  "limits": "Unchanged AHAS defaults and actual schemas/loader; fail whole projection on a loader rejection",
+  "receipt": "urn:ahif:bridge:projection-receipt:1.0.0"
+}

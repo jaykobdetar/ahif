@@ -1,0 +1,5 @@
+# Checksummed evidence and versioned profile bytes must survive checkout unchanged.
+docs/ahif/** -text
+profiles/** -text
+# Fictional CSV fixtures intentionally contain CRLF and embedded mixed newlines.
+tests/bridge/fixtures/tiny/*.csv -text whitespace=cr-at-eol

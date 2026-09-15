@@ -1,0 +1,548 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ahif:bridge:projection-receipt:1.0.0",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "receipt_version": {
+      "const": "1.0.0"
+    },
+    "payload_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "payload": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "ahif_version": {
+          "const": "0.1.1"
+        },
+        "source_profile": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "id": {
+              "const": "reddit-export-csv"
+            },
+            "version": {
+              "const": "1.0.0"
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            }
+          },
+          "required": [
+            "id",
+            "version",
+            "sha256"
+          ]
+        },
+        "projection_profile": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "id": {
+              "const": "ahas-conservative"
+            },
+            "version": {
+              "const": "1.0.0"
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            }
+          },
+          "required": [
+            "id",
+            "version",
+            "sha256"
+          ]
+        },
+        "selection": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "version": {
+              "const": "1.0.0"
+            },
+            "source_id": {
+              "type": "string"
+            },
+            "account_key": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "namespace": {
+                  "type": "string"
+                },
+                "collection": {
+                  "type": "string"
+                },
+                "id_type": {
+                  "type": "string"
+                },
+                "id": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "namespace",
+                "collection",
+                "id_type",
+                "id"
+              ]
+            },
+            "scope": {
+              "const": "all_supplied_records_non_temporal"
+            },
+            "as_of": {
+              "const": "selected_observations_no_common_instant"
+            }
+          },
+          "required": [
+            "version",
+            "source_id",
+            "account_key",
+            "scope",
+            "as_of"
+          ]
+        },
+        "input": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "canonical_manifest_sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "files": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "path": {
+                    "type": "string"
+                  },
+                  "sha256": {
+                    "type": "string",
+                    "pattern": "^[0-9a-f]{64}$"
+                  },
+                  "byte_length": {
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                },
+                "required": [
+                  "path",
+                  "sha256",
+                  "byte_length"
+                ]
+              }
+            },
+            "sources": {
+              "type": "array",
+              "items": {
+                "type": "object"
+              }
+            },
+            "manifest_bytes": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "path": {
+                  "type": "string"
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[0-9a-f]{64}$"
+                },
+                "byte_length": {
+                  "type": "integer",
+                  "minimum": 0
+                }
+              },
+              "required": [
+                "path",
+                "sha256",
+                "byte_length"
+              ]
+            }
+          },
+          "required": [
+            "canonical_manifest_sha256",
+            "files",
+            "sources",
+            "manifest_bytes"
+          ]
+        },
+        "decisions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "observation_id": {
+                "type": "string"
+              },
+              "row_type": {
+                "enum": [
+                  "record",
+                  "account"
+                ]
+              },
+              "source_id": {
+                "type": "string"
+              },
+              "key": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "namespace": {
+                    "type": "string"
+                  },
+                  "collection": {
+                    "type": "string"
+                  },
+                  "id_type": {
+                    "type": "string"
+                  },
+                  "id": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "namespace",
+                  "collection",
+                  "id_type",
+                  "id"
+                ]
+              },
+              "locator": {
+                "type": "object"
+              },
+              "decision": {
+                "enum": [
+                  "selected",
+                  "excluded",
+                  "quarantined"
+                ]
+              },
+              "reason": {
+                "type": "string"
+              },
+              "output_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "equivalence_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "transformations": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                }
+              },
+              "fields": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "field": {
+                      "type": "string"
+                    },
+                    "disposition": {
+                      "enum": [
+                        "mapped",
+                        "aliased",
+                        "omitted",
+                        "receipt_only",
+                        "constant",
+                        "refused"
+                      ]
+                    },
+                    "reason": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "field",
+                    "disposition",
+                    "reason"
+                  ]
+                }
+              }
+            },
+            "required": [
+              "observation_id",
+              "row_type",
+              "source_id",
+              "key",
+              "locator",
+              "decision",
+              "reason",
+              "output_id",
+              "equivalence_sha256",
+              "transformations",
+              "fields"
+            ]
+          }
+        },
+        "aliases": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "type": {
+                "enum": [
+                  "record",
+                  "account"
+                ]
+              },
+              "key": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "namespace": {
+                    "type": "string"
+                  },
+                  "collection": {
+                    "type": "string"
+                  },
+                  "id_type": {
+                    "type": "string"
+                  },
+                  "id": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "namespace",
+                  "collection",
+                  "id_type",
+                  "id"
+                ]
+              },
+              "source_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "alias": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "type",
+              "key",
+              "source_id",
+              "alias"
+            ]
+          }
+        },
+        "counts": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "record_observations": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "account_observations": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "logical_record_keys": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "selected_records": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "excluded_observations": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "quarantined_observations": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "required": [
+            "record_observations",
+            "account_observations",
+            "logical_record_keys",
+            "selected_records",
+            "excluded_observations",
+            "quarantined_observations"
+          ]
+        },
+        "snapshot_fields": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "field": {
+                "type": "string"
+              },
+              "disposition": {
+                "enum": [
+                  "mapped",
+                  "aliased",
+                  "omitted",
+                  "receipt_only",
+                  "constant",
+                  "refused"
+                ]
+              },
+              "reason": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "field",
+              "disposition",
+              "reason"
+            ]
+          }
+        },
+        "outputs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "path": {
+                "type": "string"
+              },
+              "sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "byte_length": {
+                "type": "integer",
+                "minimum": 0
+              }
+            },
+            "required": [
+              "path",
+              "sha256",
+              "byte_length"
+            ]
+          }
+        },
+        "expanded_records": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "expanded_snapshot": {
+          "type": "object"
+        },
+        "ahas": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "version": {
+              "const": "1.0.4"
+            },
+            "implementation_sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "environment": {
+              "type": "string"
+            },
+            "resources": {
+              "type": "object"
+            },
+            "contracts": {
+              "type": "object"
+            },
+            "config_sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "config_json": {
+              "type": "string"
+            },
+            "canonical_snapshot_sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "loader_warnings": {
+              "type": "array",
+              "items": {
+                "type": "object"
+              }
+            }
+          },
+          "required": [
+            "version",
+            "implementation_sha256",
+            "environment",
+            "resources",
+            "contracts",
+            "config_sha256",
+            "config_json",
+            "canonical_snapshot_sha256",
+            "loader_warnings"
+          ]
+        }
+      },
+      "required": [
+        "ahif_version",
+        "source_profile",
+        "projection_profile",
+        "selection",
+        "input",
+        "decisions",
+        "aliases",
+        "counts",
+        "snapshot_fields",
+        "outputs",
+        "expanded_records",
+        "expanded_snapshot",
+        "ahas"
+      ]
+    },
+    "operational": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "executed_at": {
+          "type": "string"
+        },
+        "bundle_path": {
+          "type": "string"
+        },
+        "output_path": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "executed_at",
+        "bundle_path",
+        "output_path"
+      ]
+    }
+  },
+  "required": [
+    "receipt_version",
+    "payload_sha256",
+    "payload",
+    "operational"
+  ]
+}

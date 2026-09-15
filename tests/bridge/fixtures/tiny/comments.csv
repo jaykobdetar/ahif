@@ -1,0 +1,13 @@
+id,permalink,date,ip,subreddit,gildings,gildings_silver,gildings_supergold,link,parent,body,media
+900719925474099312345,https://www.reddit.com/r/fictional/comments/p1/fictional/900719925474099312345/,2026-02-03 04:05:06 UTC,,fictional,,,,https://www.reddit.com/r/fictional/comments/p1/fictional/,absent1,"Literal, ""quoted"" café é 🐈
+> third-party quote
+```py
+print(""X"")
+```
+",
+b2,https://www.reddit.com/r/fictional/comments/p1/fictional/b2/,2026-02-04 04:05:06 UTC,,fictional,,,,https://www.reddit.com/r/fictional/comments/p1/fictional/,absent1,[removed],
+b3,https://www.reddit.com/r/fictional/comments/p1/fictional/b3/,2026-02-05,,fictional,,,,https://www.reddit.com/r/fictional/comments/p1/fictional/,,[deleted],
+b4,https://www.reddit.com/r/fictional/comments/p1/fictional/b4/,2026-02-03T05:05:06+01:00,,fictional,,,,https://www.reddit.com/r/fictional/comments/p1/fictional/,,,
+b5,https://www.reddit.com/r/fictional/comments/p1/fictional/b5/,2026-02-06 04:05:06 UTC,,fictional,,,,https://www.reddit.com/r/fictional/comments/p1/fictional/,,Same wording.,
+b6,https://www.reddit.com/r/fictional/comments/p1/fictional/b6/,2026-02-06 04:05:06 UTC,,fictional,,,,https://www.reddit.com/r/fictional/comments/p1/fictional/,,Same wording.,
+b7,https://www.reddit.com/r/fictional/comments/p1/fictional/b7/,bad date,,fictional,,,,https://www.reddit.com/r/fictional/comments/p1/fictional/,, [removed] ,

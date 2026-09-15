@@ -5,3 +5,8 @@ __pycache__/
 .env
 .env.*
 .DS_Store
+
+# Local evidence and reports must stay outside published source.
+/private/
+/private_runs/
+/local-runs/

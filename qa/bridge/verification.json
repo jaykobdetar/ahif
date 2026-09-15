@@ -1,0 +1,286 @@
+{
+  "started_at": "2026-09-15T20:49:54.071282+00:00",
+  "status": "passed",
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "commands": [
+    {
+      "argv": [
+        "<repository>/../../.venv/bin/python",
+        "-m",
+        "pytest",
+        "tests/bridge",
+        "-q",
+        "--tb=short"
+      ],
+      "exit_code": 0,
+      "log": "tests.log"
+    },
+    {
+      "argv": [
+        "<repository>/../../.venv/bin/python",
+        "/tmp/tmpno_n7a3e/ahif/scripts/check_contract.py"
+      ],
+      "exit_code": 0,
+      "log": "format-check.log"
+    }
+  ],
+  "format_check": {
+    "started_at": "2026-09-15T20:50:00.520183+00:00",
+    "status": "passed_for_standalone_checks",
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "dependencies": {
+      "jsonschema": "4.26.0",
+      "referencing": "0.37.0"
+    },
+    "analysis_performed": false,
+    "ahif_version": "0.1.1",
+    "tests": {
+      "run": 61,
+      "passed": 60,
+      "failures": 0,
+      "errors": 0,
+      "skipped": [
+        {
+          "test": "test_review.ReviewTests.test_actual_ahas_schema_rejects_direct_ahif",
+          "reason": "Requires the original AHAS workspace and installation; not part of standalone format validation."
+        }
+      ]
+    },
+    "source_preservation": {
+      "files": 92,
+      "byte_identical": true
+    },
+    "verified_checksum_entries": {
+      "0.1.1": 55,
+      "0.1.0": 34
+    },
+    "bundles": {
+      "empty-bundle": {
+        "status": "passed",
+        "format_version": "0.1.1",
+        "record_observations": 0,
+        "distinct_record_keys": 0,
+        "account_observations": 0,
+        "record_keys_with_multiple_observations": 0,
+        "source_local_record_observations": 0,
+        "projection_status": "not_performed",
+        "authenticity_status": "not_established",
+        "canonical_export": true,
+        "completeness_status": "not_established",
+        "count_semantics": "supplied keys only; not verified posting-event totals",
+        "warnings": {},
+        "files": [
+          {
+            "path": "records.jsonl",
+            "role": "records",
+            "rows": 0
+          }
+        ]
+      },
+      "hostile-and-identity": {
+        "status": "passed",
+        "format_version": "0.1.1",
+        "record_observations": 3,
+        "distinct_record_keys": 3,
+        "account_observations": 2,
+        "record_keys_with_multiple_observations": 0,
+        "source_local_record_observations": 0,
+        "projection_status": "not_performed",
+        "authenticity_status": "not_established",
+        "canonical_export": true,
+        "completeness_status": "not_established",
+        "count_semantics": "supplied keys only; not verified posting-event totals",
+        "warnings": {},
+        "files": [
+          {
+            "path": "accounts.jsonl",
+            "role": "accounts",
+            "rows": 2
+          },
+          {
+            "path": "raw/source.json",
+            "role": "raw",
+            "rows": null
+          },
+          {
+            "path": "records.jsonl",
+            "role": "records",
+            "rows": 3
+          }
+        ]
+      },
+      "minimal": {
+        "status": "passed",
+        "format_version": "0.1.1",
+        "record_observations": 1,
+        "distinct_record_keys": 1,
+        "account_observations": 0,
+        "record_keys_with_multiple_observations": 0,
+        "source_local_record_observations": 0,
+        "projection_status": "not_performed",
+        "authenticity_status": "not_established",
+        "canonical_export": true,
+        "completeness_status": "not_established",
+        "count_semantics": "supplied keys only; not verified posting-event totals",
+        "warnings": {},
+        "files": [
+          {
+            "path": "records.jsonl",
+            "role": "records",
+            "rows": 1
+          }
+        ]
+      },
+      "mixed-platform": {
+        "status": "passed",
+        "format_version": "0.1.1",
+        "record_observations": 12,
+        "distinct_record_keys": 11,
+        "account_observations": 3,
+        "record_keys_with_multiple_observations": 1,
+        "source_local_record_observations": 0,
+        "projection_status": "not_performed",
+        "authenticity_status": "not_established",
+        "canonical_export": true,
+        "completeness_status": "not_established",
+        "count_semantics": "supplied keys only; not verified posting-event totals",
+        "warnings": {},
+        "files": [
+          {
+            "path": "accounts.jsonl",
+            "role": "accounts",
+            "rows": 3
+          },
+          {
+            "path": "raw/source.json",
+            "role": "raw",
+            "rows": null
+          },
+          {
+            "path": "records.jsonl",
+            "role": "records",
+            "rows": 12
+          }
+        ]
+      },
+      "review-cases": {
+        "status": "passed",
+        "format_version": "0.1.1",
+        "record_observations": 14,
+        "distinct_record_keys": 11,
+        "account_observations": 2,
+        "record_keys_with_multiple_observations": 1,
+        "source_local_record_observations": 1,
+        "projection_status": "not_performed",
+        "authenticity_status": "not_established",
+        "canonical_export": true,
+        "completeness_status": "not_established",
+        "count_semantics": "supplied keys only; not verified posting-event totals",
+        "warnings": {},
+        "files": [
+          {
+            "path": "accounts.jsonl",
+            "role": "accounts",
+            "rows": 2
+          },
+          {
+            "path": "records.jsonl",
+            "role": "records",
+            "rows": 14
+          }
+        ]
+      },
+      "uncertain-time": {
+        "status": "passed",
+        "format_version": "0.1.1",
+        "record_observations": 4,
+        "distinct_record_keys": 4,
+        "account_observations": 0,
+        "record_keys_with_multiple_observations": 0,
+        "source_local_record_observations": 0,
+        "projection_status": "not_performed",
+        "authenticity_status": "not_established",
+        "canonical_export": true,
+        "completeness_status": "not_established",
+        "count_semantics": "supplied keys only; not verified posting-event totals",
+        "warnings": {},
+        "files": [
+          {
+            "path": "raw/source.json",
+            "role": "raw",
+            "rows": null
+          },
+          {
+            "path": "records.jsonl",
+            "role": "records",
+            "rows": 4
+          }
+        ]
+      }
+    },
+    "regeneration": {
+      "files_compared": 27,
+      "byte_identical": true
+    },
+    "limitations": [
+      "Original AHAS integration test explicitly skipped; engine not included.",
+      "No source collection, projection, scientific analysis or production ingestion audit.",
+      "Historical adoption receipts are preserved, not regenerated."
+    ],
+    "finished_at": "2026-09-15T20:50:01.504488+00:00"
+  },
+  "engine_baseline": {
+    "repository": "https://github.com/jaykobdetar/account-history-analyzer",
+    "commit": "6f465bd95fa3c12df41235986a96a04cf6c332d0",
+    "files_checked": 70,
+    "all_match": true
+  },
+  "engine": {
+    "version": "1.0.4",
+    "implementation_sha256": "bfc989028bf2b47c506d1ba501287d4e362aadc25ca5c731c41e4b27a336e179",
+    "environment": "CPython-3.12.3;Linux;x86_64;numpy=2.4.2;scipy=1.17.1;ruptures=1.1.10;markdown-it-py=3.0.0;jsonschema=4.26.0",
+    "resources": {
+      "contraction_pairs.json": "f14da203d3a5965b5ea0982551dc9748c4a9655e7662cf8617ba58d86b805f34",
+      "default.toml": "b7147fe42aa43213cca289b263aa9e38889c0eb8dfbca43e7f710947331aa0a3",
+      "function_words_en_v1.txt": "f91c30201a636e7a9edd15166342afdcedae7fa34d7c7dd5c7352e49d4af2c9e",
+      "method_registry": "1b4d53b648303ea3b10f98e8dc40958b50587bd3c61c2262c83be7fb8a30da26",
+      "report_templates": "c8aa520917dc68d8229495a28a4375ab9e95902fe226955e79cbd1143ea3956c"
+    },
+    "contracts": {
+      "record.schema.json": "38a224db4624e99eef029c782e23ee9cf6f3b33015dc25732efa1f553ecf5f21",
+      "snapshot.schema.json": "8567f3172b86773c2ec07091e24ff9a695305c6024e1fcfb5b362e1196fe65b1"
+    },
+    "config_sha256": "8fd0239fe2f87c9f1506786ac36099fe996e00cc6e021b3ecc67fbb65cd2d925"
+  },
+  "preserved_contract_files": 92,
+  "profile_bindings": {
+    "reddit-export-csv": "ab16eb336495a61dcc5658f29300fd1cd5552d1fba230cadd77d0b7af62b556a",
+    "ahas-conservative": "80e951db7b20ca813007129fb5dcc047e5cbd4c40d4b918fcde4a20b85b021be"
+  },
+  "implementation_files": {
+    "bridge/__init__.py": "aa0d6fd18f7d6aa2bf37c9614346a3d81166d96b5d3bf4fb79f06a64615d7b51",
+    "bridge/cli.py": "b3398af697e97bbeb44daefd7db110d19306fab7e791c54c718c442979ca1fe7",
+    "bridge/common.py": "50ef06526f325598586679fb3a56d232870a446ed5ad220ac36f0d136dd2a57e",
+    "bridge/projection.py": "6e5b863651df4cb5da0eb5783e3a6e0f68b9d9e0e43bc0c6a1d489fe8aa7151b",
+    "bridge/reddit.py": "bf37c25291f579910aeaca3efafa8c7afe23f457ebe906449b4bc2bbc7858f6e",
+    "profiles/ahas-conservative/1.0.0/README.md": "3d2e7d3b7ad2b9d3bc67882f21d0e2e97b703126a2b13c2ca80d384bab1d6ae3",
+    "profiles/ahas-conservative/1.0.0/profile.json": "cd8d34710f22b89965f9b099e92ea0dec750b28191ae31e115ed6bb6e509425c",
+    "profiles/ahas-conservative/1.0.0/receipt.schema.json": "bd9ac30564d075ec1cd9e2f41b4760815a6b63943aca953f6564b7b8e42f8ea4",
+    "profiles/reddit-export-csv/1.0.0/README.md": "141ee55d203d44e6a4e40db42720b5a00b17896e4742e2a6f83277b7b4747d6c",
+    "profiles/reddit-export-csv/1.0.0/profile.json": "d90fdebefb057047abedbf756527d3bfabad48e7fcedfb4fd6e26c54582cab4d",
+    "tests/bridge/fixtures/expected.json": "a68a11c6af43c2e260b957e831a69267f152acc0a055104bbcf186e41c5641d9",
+    "tests/bridge/fixtures/tiny/comments.csv": "b7505d9af328e5a87f7fedd54e92483855d40d575f1fdcb8f456faeef1c0b2eb",
+    "tests/bridge/fixtures/tiny/posts.csv": "ae4b3e1c3bff827229ec00af614207cea8601ec7af1d4695b2febac40843569b",
+    "tests/bridge/test_bridge.py": "a75123a9e22c9262c1fa5b4b9ce5b4160f10291f5f30a1b19805996a90b53b2e",
+    "scripts/private_integration.py": "cb2e9425b8a1d234d73aed4a5e174233c9705efc80800155fe69b9a43fe2a7ad",
+    "scripts/check_bridge.py": "f4db8bc2982ed6549898ee2392150d537dc8a3cc5c4bc3fe0fd451156b0b6d2a",
+    "requirements-bridge-test.txt": "6903368da0cd26185b547ad085883c6ecd48fefa374a2743b6ccf8714b8867fe"
+  },
+  "limitations": [
+    "Fictional tests plus one separately documented private metadata-only integration.",
+    "No retained-prose projection or scientific authorship accuracy validation.",
+    "Original format-only test skips its parent-dependent integration test; new bridge tests use actual AHAS.",
+    "Bounded trusted-file helper, not a production hostile-ingestion audit."
+  ],
+  "finished_at": "2026-09-15T20:50:01.587052+00:00"
+}

@@ -1,0 +1,4 @@
+id,permalink,date,ip,subreddit,gildings,title,url,body
+p1,https://www.reddit.com/r/fictional/comments/p1/fictional/,2026-02-01 00:00:00 UTC,,fictional,,A fictional title — exact.,https://example.invalid/destination,[removed]
+p2,https://www.reddit.com/r/fictional/comments/p2/fictional/,,,fictional,,Title only,,
+p3,https://www.reddit.com/r/fictional/comments/p3/fictional/,2026-02-01 00:00:00 UTC,,fictional,,,https://example.invalid/no-text,

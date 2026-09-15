@@ -1,0 +1,4 @@
+-r requirements.txt
+pytest==9.0.2
+# Separately supply the unchanged AHAS 1.0.4 installation and its pinned runtime.
+# It is not downloaded or bundled by this repository.

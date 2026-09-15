@@ -1,0 +1,23 @@
+{
+  "status": "passed_for_standalone_checks",
+  "tests": {
+    "run": 61,
+    "passed": 60,
+    "failures": 0,
+    "errors": 0,
+    "skipped": [
+      {
+        "test": "test_review.ReviewTests.test_actual_ahas_schema_rejects_direct_ahif",
+        "reason": "Requires the original AHAS workspace and installation; not part of standalone format validation."
+      }
+    ]
+  },
+  "source_preservation": {
+    "files": 92,
+    "byte_identical": true
+  },
+  "regeneration": {
+    "files_compared": 27,
+    "byte_identical": true
+  }
+}

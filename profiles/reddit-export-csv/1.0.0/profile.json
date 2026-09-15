@@ -1,0 +1,65 @@
+{
+  "profile_id": "reddit-export-csv",
+  "version": "1.0.0",
+  "ahif_version": "0.1.1",
+  "namespace": "urn:ahif:service:reddit",
+  "members": {
+    "comments.csv": [
+      "id",
+      "permalink",
+      "date",
+      "ip",
+      "subreddit",
+      "gildings",
+      "gildings_silver",
+      "gildings_supergold",
+      "link",
+      "parent",
+      "body",
+      "media"
+    ],
+    "posts.csv": [
+      "id",
+      "permalink",
+      "date",
+      "ip",
+      "subreddit",
+      "gildings",
+      "title",
+      "url",
+      "body"
+    ]
+  },
+  "collections": {
+    "comments.csv": "comments",
+    "posts.csv": "posts"
+  },
+  "id_pattern": "^[0-9a-z]+$",
+  "encoding": "UTF-8 without BOM",
+  "csv": "comma, double-quoted fields, doubled quote escapes, LF or CRLF, logical data rows counted from 1",
+  "limits": {
+    "member_bytes": 8388608,
+    "rows_per_member": 10000,
+    "field_codepoints": 200000
+  },
+  "known_time": "YYYY-MM-DD HH:MM:SS UTC -> YYYY-MM-DDTHH:MM:SSZ; exact second resolution",
+  "other_times": "Valid YYYY-MM-DD is date_only with unknown offset; all other spellings remain unknown/raw",
+  "sentinels": {
+    "[removed]": "removed",
+    "[deleted]": "deleted"
+  },
+  "text": "Exact CSV decoded fields. Body is other with Reddit-export-unknown variant; title is plain. No dialect compatibility claim or syntax-based authorship segmentation.",
+  "lifecycle": "Exact body sentinels declare their corresponding unavailable state; otherwise unknown. Never infer visible from retained text.",
+  "completeness": "Unknown for retained text because this export supplies no completeness declaration. Blank body does not prove absent body.",
+  "identity": "Explicit caller choice: export_subject is one source-local export subject; unknown is null. Never derive a native account ID/handle from archive filename.",
+  "raw": "Hash only comments.csv/posts.csv uncompressed bytes; include no raw members. Original input remains private and unchanged.",
+  "ignored_columns": [
+    "ip",
+    "gildings",
+    "gildings_silver",
+    "gildings_supergold",
+    "media"
+  ],
+  "network": "none",
+  "thread_link": "comments.csv link accepts /r/COMMUNITY/comments/POST or /r/COMMUNITY/comments/POST/SLUG/ and must agree with the permalink root; otherwise root and parent collection remain unresolved."
+}

@@ -1,0 +1,171 @@
+{
+  "status": "passed",
+  "execution_finished_at": "2026-09-15T20:46:06.690053+00:00",
+  "scope": "One owner-supplied local Reddit export; metadata-only subset. No new scientific pilot.",
+  "source_members": [
+    "comments.csv",
+    "posts.csv"
+  ],
+  "source_member_row_counts": {
+    "comments.csv": 194,
+    "posts.csv": 53
+  },
+  "counts": {
+    "account_observations": 0,
+    "excluded_observations": 0,
+    "logical_record_keys": 247,
+    "quarantined_observations": 239,
+    "record_observations": 247,
+    "selected_records": 8
+  },
+  "text_fields_verified": 300,
+  "decision_reasons": {
+    "lifecycle_content_unrepresentable": 239,
+    "sole_observation": 8
+  },
+  "source_integrity": "Selected CSV byte hashes matched the preserved prior direct-input conversion receipt.",
+  "reproducibility": {
+    "canonical_bundle_bytes_equal": true,
+    "paths_and_runtime_timestamps_excluded": true,
+    "projection_payload_equal": true
+  },
+  "prior_comparison": {
+    "all_record_fields_equal_after_declared_substitutions": true,
+    "full_prior_history_or_reports_compared": false,
+    "records": 8,
+    "status": "passed"
+  },
+  "numerical_comparison": {
+    "status": "passed",
+    "scope": "Entire results.json on matched subset after documented input substitutions",
+    "full_historical_reports_byte_identical_claimed": false
+  },
+  "analysis_module_statuses": {
+    "activity": "ok",
+    "ai_text_detection": "not_run",
+    "coverage": "ok",
+    "interactions": "ok",
+    "links": "ok",
+    "reuse": "insufficient_data",
+    "style": "insufficient_data",
+    "text": "insufficient_data"
+  },
+  "normal_verification": {
+    "status": "reproduced",
+    "scope": "all_canonical_artifacts",
+    "canonical_artifacts_reproduced": 14
+  },
+  "original_files_unchanged": true,
+  "engine_boundary_unchanged": true,
+  "engine": {
+    "config_sha256": "8fd0239fe2f87c9f1506786ac36099fe996e00cc6e021b3ecc67fbb65cd2d925",
+    "contracts": {
+      "record.schema.json": "38a224db4624e99eef029c782e23ee9cf6f3b33015dc25732efa1f553ecf5f21",
+      "snapshot.schema.json": "8567f3172b86773c2ec07091e24ff9a695305c6024e1fcfb5b362e1196fe65b1"
+    },
+    "environment": "CPython-3.12.3;Linux;x86_64;numpy=2.4.2;scipy=1.17.1;ruptures=1.1.10;markdown-it-py=3.0.0;jsonschema=4.26.0",
+    "implementation_sha256": "bfc989028bf2b47c506d1ba501287d4e362aadc25ca5c731c41e4b27a336e179",
+    "resources": {
+      "contraction_pairs.json": "f14da203d3a5965b5ea0982551dc9748c4a9655e7662cf8617ba58d86b805f34",
+      "default.toml": "b7147fe42aa43213cca289b263aa9e38889c0eb8dfbca43e7f710947331aa0a3",
+      "function_words_en_v1.txt": "f91c30201a636e7a9edd15166342afdcedae7fa34d7c7dd5c7352e49d4af2c9e",
+      "method_registry": "1b4d53b648303ea3b10f98e8dc40958b50587bd3c61c2262c83be7fb8a30da26",
+      "report_templates": "c8aa520917dc68d8229495a28a4375ab9e95902fe226955e79cbd1143ea3956c"
+    },
+    "version": "1.0.4"
+  },
+  "source_profile": {
+    "id": "reddit-export-csv",
+    "sha256": "ab16eb336495a61dcc5658f29300fd1cd5552d1fba230cadd77d0b7af62b556a",
+    "version": "1.0.0"
+  },
+  "projection_profile": {
+    "id": "ahas-conservative",
+    "sha256": "80e951db7b20ca813007129fb5dcc047e5cbd4c40d4b918fcde4a20b85b021be",
+    "version": "1.0.0"
+  },
+  "commands": [
+    {
+      "name": "normalize-bundle-a",
+      "exit_code": 0,
+      "elapsed_seconds": "1.982054"
+    },
+    {
+      "name": "normalize-bundle-b",
+      "exit_code": 0,
+      "elapsed_seconds": "2.031763"
+    },
+    {
+      "name": "projection-a",
+      "exit_code": 0,
+      "elapsed_seconds": "1.493073"
+    },
+    {
+      "name": "verify-projection-a",
+      "exit_code": 0,
+      "elapsed_seconds": "1.345785"
+    },
+    {
+      "name": "projection-b",
+      "exit_code": 0,
+      "elapsed_seconds": "1.377973"
+    },
+    {
+      "name": "verify-projection-b",
+      "exit_code": 0,
+      "elapsed_seconds": "1.333054"
+    },
+    {
+      "name": "ahas-validate-projected",
+      "exit_code": 0,
+      "elapsed_seconds": "0.117885"
+    },
+    {
+      "name": "ahas-analyze-projected",
+      "exit_code": 0,
+      "elapsed_seconds": "1.718256"
+    },
+    {
+      "name": "ahas-validate-prior-matched",
+      "exit_code": 0,
+      "elapsed_seconds": "0.123486"
+    },
+    {
+      "name": "ahas-analyze-prior-matched",
+      "exit_code": 0,
+      "elapsed_seconds": "1.815376"
+    },
+    {
+      "name": "ahas-verify-recompute",
+      "exit_code": 0,
+      "elapsed_seconds": "1.838264"
+    }
+  ],
+  "network_isolation": "linux_seccomp_socket_denial",
+  "privacy": "Source paths, original/aliased account and record IDs, source hashes, full argv, private bundles, receipts and reports remain outside this repository.",
+  "limitations": [
+    "No retained prose enters AHAS.",
+    "Source attribution/integrity checks do not establish scientific authorship accuracy.",
+    "No completeness percentages, native account identities or source verification are inferred."
+  ],
+  "final_code_rechecks": {
+    "status": "passed",
+    "checks": [
+      {
+        "name": "current-fidelity",
+        "exit_code": 0
+      },
+      {
+        "name": "current-projection-replay",
+        "exit_code": 0
+      }
+    ],
+    "bridge_file_sha256": {
+      "bridge/reddit.py": "bf37c25291f579910aeaca3efafa8c7afe23f457ebe906449b4bc2bbc7858f6e",
+      "bridge/cli.py": "b3398af697e97bbeb44daefd7db110d19306fab7e791c54c718c442979ca1fe7",
+      "bridge/projection.py": "6e5b863651df4cb5da0eb5783e3a6e0f68b9d9e0e43bc0c6a1d489fe8aa7151b",
+      "bridge/__init__.py": "aa0d6fd18f7d6aa2bf37c9614346a3d81166d96b5d3bf4fb79f06a64615d7b51",
+      "bridge/common.py": "50ef06526f325598586679fb3a56d232870a446ed5ad220ac36f0d136dd2a57e"
+    }
+  }
+}
