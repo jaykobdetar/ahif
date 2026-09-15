@@ -3,3 +3,5 @@ docs/ahif/** -text
 profiles/** -text
 # Fictional CSV fixtures intentionally contain CRLF and embedded mixed newlines.
 tests/bridge/fixtures/tiny/*.csv -text whitespace=cr-at-eol
+# Observation fixtures also preserve intentional Markdown hard-break spaces.
+tests/observation/fixtures/prose/*.csv -text whitespace=cr-at-eol,-blank-at-eol

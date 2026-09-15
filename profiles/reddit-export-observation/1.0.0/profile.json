@@ -1,0 +1,38 @@
+{
+  "profile_id": "reddit-export-observation",
+  "version": "1.0.0",
+  "ahif_version": "0.1.1",
+  "ahas_version": "1.0.4",
+  "input_schema_version": "1.0.0",
+  "selection_version": "1.0.0",
+  "source_profile": "reddit-export-csv 1.0.0; selected source-local export_subject",
+  "status_present": "Literal body text supplied in this analytical snapshot; no public visibility, complete-original-object, original-time-wording or personal-authorship claim.",
+  "text_completeness": [
+    "unknown",
+    "complete"
+  ],
+  "eligible_lifecycle": [
+    "unknown",
+    "visible"
+  ],
+  "known_nonvisible": "deleted/removed/restricted exclude body and title, retain eligible event metadata",
+  "field_fidelity": "Exact literal source_field strings; body/title separate; AHAS derived transformations are separate from field copying",
+  "analysis_format": "markdown: frozen AHAS CommonMark interpretation for accepted export body and plain source title; not dialect-equivalence assertion",
+  "unsupported_markup_patterns": {
+    "unsupported_html_markup": "<!--|</?[A-Za-z][A-Za-z0-9-]*(?:\\s[^<>]*|\\s*/?)>",
+    "unsupported_bbcode_markup": "\\[/?(?:quote|code|url|img)(?:\\]|=|\\s)",
+    "unsupported_reddit_spoiler": ">!|!<",
+    "unsupported_strikethrough": "~~"
+  },
+  "language": "Source-part tag only when compatible; und for unknown/mixed. Optional explicit source/account/observation-bound supplier confirmation. No inference.",
+  "language_declaration_schema_sha256": "a585969e5afa4152c72f6ea9691e15e291817d23501b8c694c3c77b24a83a148",
+  "scope": "One source and its source-local export-subject; all supplied keys considered with separate text/event/conflict accounting; sampled coverage no completeness percentage",
+  "time": "Unknown/coarse/unsupported precision omitted; original facts retained. Exact creation/edit contradiction excludes event. No importclock.",
+  "identity": "Frozen full logical record-key alias domain; text identity never merges events",
+  "snapshot_identity_domain": "AHIF:reddit-export-observation:1.0.0\n",
+  "receipt_identity_domain": "AHIF:reddit-export-observation-receipt:1.0.0\n",
+  "language_identity_domain": "AHIF:export-observation-language:1.0.0\n",
+  "receipt": "urn:ahif:bridge:reddit-export-observation-receipt:1.0.0",
+  "presentation": "Versioned interpretation cover required alongside unchanged canonical reports because frozen renderer does not show source_notes or coverage.notes",
+  "limits": "Frozen installed AHAS 1.0.4 defaults; validate every output with actual schema and loader; no in-place modifications"
+}

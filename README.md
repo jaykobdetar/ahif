@@ -2,7 +2,7 @@
 
 A versioned evidence format for supplied account-history records. **The reviewed contract is draft 0.1.1.** It preserves logical events separately from repeated observations, attributed text parts, uncertain timestamps, source provenance and coverage limitations.
 
-This standalone repository contains the format specification, machine-readable schemas, fictional examples, offline checker, validation tests and review receipts. A new [offline Reddit CSV bridge](docs/BRIDGE.md) normalizes supplied contribution files and projects an explicitly limited **metadata-only** subset into AHAS 1.0.4. Retained prose remains evidence and is not yet supported as analysis input. The AHAS engine and private evidence are not included here; there is no live collection.
+This standalone repository contains the format specification, machine-readable schemas, fictional examples, offline checker, validation tests and review receipts. The [offline Reddit CSV bridge](docs/BRIDGE.md) normalizes supplied contribution files. Its original conservative projection remains **metadata-only**. A separate [export-observation profile](docs/EXPORT_OBSERVATION.md) carries eligible literal body/title fields into AHAS 1.0.4 for explicitly scoped source-field measurements. The AHAS engine and private evidence are not included here; there is no live collection.
 
 The companion [account-history-analyzer repository](https://github.com/jaykobdetar/account-history-analyzer) owns the frozen engine and its analysis-input schemas. Use the explicit bridge commands below to connect the two contracts.
 
@@ -37,6 +37,8 @@ PYTHONDONTWRITEBYTECODE=1 .venv/bin/python scripts/check_contract.py
 This runs 60 format tests and explicitly skips the one original AHAS integration test that requires the parent analyzer workspace. It also validates six canonical bundles, verifies the preserved package checksums and checks byte-identical schema/example regeneration. Fresh standalone results are written to [qa/standalone-verification.json](qa/standalone-verification.json) and [qa/standalone-tests.log](qa/standalone-tests.log).
 
 ## Offline bridge implementation
+
+For prose-carrying analysis, use the new [export-observation contract and commands](docs/EXPORT_OBSERVATION.md), [decision record](docs/EXPORT_OBSERVATION_DECISION.md), and [actual integration report](docs/EXPORT_OBSERVATION_REPORT.md). Unknown visibility, completeness, edit state and language remain unknown. Text eligibility and posting-event eligibility are separate; context-bearing presentation accompanies unchanged canonical AHAS reports.
 
 See the [supported contract and commands](docs/BRIDGE.md), [source profile](profiles/reddit-export-csv/1.0.0/README.md), [projection rules](profiles/ahas-conservative/1.0.0/README.md), [receipt schema](profiles/ahas-conservative/1.0.0/receipt.schema.json), and [execution report](docs/BRIDGE_REPORT.md). The versioned 0.1.1 documents below remain frozen historical adoption artifacts; their “future converter” statements describe the adoption stage. New implementation claims are documented separately.
 

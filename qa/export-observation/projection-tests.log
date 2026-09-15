@@ -1,0 +1,5 @@
+Fictional projection and operational-clock regression execution
+Command: PYTHONPATH=standalone/ahif PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m pytest -q -p no:cacheprovider standalone/ahif/tests/observation/test_projection.py
+...............................                                          [100%]
+31 passed in 8.13s
+Exit code: 0

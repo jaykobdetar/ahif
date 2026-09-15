@@ -1,0 +1,58 @@
+{
+  "c1": {
+    "words": 12,
+    "segments": [
+      "Orchard notes",
+      "I keep clear labels here.",
+      "Do",
+      "not join.",
+      "Final",
+      "stop."
+    ],
+    "structure": {
+      "removed_quote_spans": 1,
+      "removed_code_spans": 2,
+      "removed_url_spans": 1,
+      "headings": 1,
+      "links": 3,
+      "paragraphs": 4
+    }
+  },
+  "c2": {
+    "words": 14,
+    "segments": [
+      "> Literal quote marker.",
+      "Escaped `ticks` and *stars* remain.",
+      "alpha",
+      "beta",
+      "one\ntwo",
+      "list words"
+    ],
+    "structure": {
+      "removed_quote_spans": 0,
+      "removed_code_spans": 0,
+      "removed_url_spans": 1,
+      "headings": 0,
+      "links": 1,
+      "list_items": 1,
+      "paragraphs": 5
+    }
+  },
+  "900719925474099312345": {
+    "words": 4,
+    "segments": [
+      "Café stays.\nUnicode 🦊 remains."
+    ]
+  },
+  "p1": {
+    "body_words": null,
+    "title_words": 3
+  },
+  "summary": {
+    "records": 4,
+    "body_records": 3,
+    "body_words": 30,
+    "title_words": 3,
+    "timed_events": 2
+  }
+}

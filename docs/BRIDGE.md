@@ -1,5 +1,9 @@
 # Offline Reddit export bridge 1.0.0
 
+This page documents the original conservative metadata-only projection. The
+separate [export-observation profile](EXPORT_OBSERVATION.md) now supports
+explicitly scoped supplied-field text measurements without changing this profile.
+
 AHIF **0.1.1 remains frozen**. This implementation adds a source profile, a
 normalizer and an explicit AHAS projection outside that versioned directory.
 The [execution report](BRIDGE_REPORT.md) states what was actually tested.
