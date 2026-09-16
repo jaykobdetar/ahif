@@ -51,6 +51,14 @@ planning, source maps and local review. Its [delivery report](https://github.com
 distinguishes successful extraction, failed discovery and unavailable real-data
 evaluation.
 
+The [extractor 0.2.0 repair report](https://github.com/jaykobdetar/ahif-html/blob/main/docs/REPAIR-0.2.0.md)
+covers quote/code boundaries, evidence requirements for textless events and output
+limits. The later [Luna development results](https://github.com/jaykobdetar/ahif-html/blob/main/docs/LUNA-RESULTS.md)
+report 16/26 usable text-and-attribution matches in each of three rounds over the
+same eight fictional pages, with remaining plan and metadata errors. An agent
+authored the construction annotations; these results do not establish real-site
+performance or complete history coverage.
+
 HTML observations are not supported by the existing Reddit CSV projection
 profiles and are not direct AHAS input. A separate reviewed projection remains
 necessary. This companion changes no AHIF contract, CSV bridge or frozen profile.
