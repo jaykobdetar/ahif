@@ -42,6 +42,19 @@ For prose-carrying analysis, use the new [export-observation contract and comman
 
 See the [supported contract and commands](docs/BRIDGE.md), [source profile](profiles/reddit-export-csv/1.0.0/README.md), [projection rules](profiles/ahas-conservative/1.0.0/README.md), [receipt schema](profiles/ahas-conservative/1.0.0/receipt.schema.json), and [execution report](docs/BRIDGE_REPORT.md). The versioned 0.1.1 documents below remain frozen historical adoption artifacts; their “future converter” statements describe the adoption stage. New implementation claims are documented separately.
 
+## Saved HTML extraction
+
+The separate [ahif-html prototype](https://github.com/jaykobdetar/ahif-html)
+extracts source-linked evidence from supplied saved HTML or declared captured DOM
+into AHIF 0.1.1. It provides deterministic plan replay, bounded model-assisted
+planning, source maps and local review. Its [delivery report](https://github.com/jaykobdetar/ahif-html/blob/main/docs/ADOPTION-REPORT.md)
+distinguishes successful extraction, failed discovery and unavailable real-data
+evaluation.
+
+HTML observations are not supported by the existing Reddit CSV projection
+profiles and are not direct AHAS input. A separate reviewed projection remains
+necessary. This companion changes no AHIF contract, CSV bridge or frozen profile.
+
 ## Historical evidence and packaging
 
 The entire reviewed `docs/ahif/` tree was copied byte-for-byte, including the original 0.1.0 proposal and its receipts. The original 61-test adoption result belongs to the AHAS workspace and is preserved as historical evidence; it is not presented as a standalone integration result. The original `reference/run_checks.py` and commands in the preserved adoption README require that workspace. Use `scripts/check_contract.py` here.
